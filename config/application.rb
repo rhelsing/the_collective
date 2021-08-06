@@ -12,6 +12,17 @@ module TheCollective
     config.load_defaults 6.1
 
     # Configuration for the application, engines, and railties goes here.
+    config.time_zone = 'Eastern Time (US & Canada)'
+    config.active_record.default_timezone = :local
+
+    #to skip assets, scaffolds.css, test framework, helpers, view
+    config.generators do |g|
+      g.template_engine nil #to skip views
+      g.test_framework  nil #to skip test framework
+      g.assets  false
+      g.helper false
+      g.stylesheets false
+    end
     #
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
