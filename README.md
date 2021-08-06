@@ -4,6 +4,7 @@ Collaboration over competition
 
 ## Todo next:
 
+* sign in process
 * naive user page + project page ux
 
 ---

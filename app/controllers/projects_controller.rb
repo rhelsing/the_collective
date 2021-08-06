@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: %i[ show edit update destroy ]
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: %i[ index show post_a_project ]
 
   # GET /projects or /projects.json
   def index
@@ -9,6 +9,10 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1 or /projects/1.json
   def show
+  end
+
+  def post_a_project
+    #onboarding, introduction on why you would use the collective
   end
 
   # GET /projects/new
