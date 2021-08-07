@@ -5,5 +5,7 @@ class HomeController < ApplicationController
   end
 
   def profile
+   @projects = current_user.projects
+   #also collections
   end
 end
